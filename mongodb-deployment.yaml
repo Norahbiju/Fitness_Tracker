@@ -24,9 +24,13 @@ spec:
           limits:
             cpu: "250m"
             memory: "512Mi"
+        volumeMounts:
+          - name: norah-storage
+            mountPath: /data/db
       volumes:
       - name: norah-storage
-        emptyDir: {}
+        emptyDir: 
+          sizeLimit: "512Mi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
