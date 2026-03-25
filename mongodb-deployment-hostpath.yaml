@@ -25,13 +25,13 @@ spec:
             cpu: "250m"
             memory: "512Mi"
         volumeMounts:
-          - name: norah-storage-hostpath
+          - name: norah-storage-nfs
             mountPath: /data/db
       volumes:
-      - name: norah-storage-hostpath
-        hostPath:
-          path: /data
-          type:  DirectoryOrCreate
+        - name: norah-storage-nfs
+          persistentVolumeReclaimPolicy:
+            claimName: mongo-pvc
+        
 
           
   strategy:
