@@ -29,7 +29,7 @@ spec:
             mountPath: /data/db
       volumes:
         - name: norah-storage-nfs
-          persistentVolumeReclaimPolicy:
+          persistentVolumeclaim:
             claimName: mongo-pvc
         
 
