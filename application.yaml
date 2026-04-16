@@ -10,7 +10,7 @@ spec:
     path: project
   destination:
     server: https://kubernetes.default.svc
-    namespace: fitness
+    namespace: default
   syncPolicy:
     automated:
       prune: true
