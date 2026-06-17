@@ -44,8 +44,8 @@ steps:
     kubernetesServiceConnection: 'aks-connection' 
     namespace: default
     manifests: |
-      Fitness_Chart/templates/app-deployment.yml 
-      Fitness_Chart/templates/configmap.yml 
+      Fitness_Chart/templates/app-deployment.yaml 
+      Fitness_Chart/templates/configmap.yaml 
       Fitness_Chart/templates/mongodb-deployment.yaml 
     containers: |
       fitnessnorah.azurecr.io/$(imageRepository):$(imageTag)    
