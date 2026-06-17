@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: fitness-tracker-app
-          image: nginx:1.26
+          image: fitnessnorah.azurecr.io/fitnessapp:latest
           ports:
             - containerPort: 5000
           # ✔ All configMap vars removed
