@@ -31,7 +31,7 @@ steps:
     command: 'buildAndPush'
     repository: '$(imageRepository)'
     dockerfile: '**/Dockerfile'
-    containerRegistry: 'acr-connection' //add your azure container registry connection name
+    containerRegistry: 'acr-connection' 
     tags: |
       $(imageTag)
       latest
@@ -69,7 +69,3 @@ steps:
         "$SLACK_WEBHOOK_URL"
   env:
     SLACK_WEBHOOK_URL: $(SLACK_WEBHOOK_URL) 
-see less
-Reply in thread
-has context menu
-Post in channel
